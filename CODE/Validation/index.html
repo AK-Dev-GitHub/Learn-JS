@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>バリデーションチェックのサンプル</title>
+  <script>
+    function validateForm() {
+      // フォームの入力値を取得
+      const name = document.getElementById('name').value;
+      const email = document.getElementById('email').value;
+      const password = document.getElementById('password').value;
+
+      // 名前のバリデーションチェック
+      // 必須チェックは空文字とイコールで紐づければ実装可能であることが判明した！！
+      if (name === '') {
+        alert('名前を入力してください');
+        return false;
+      }
+
+      // メールアドレスのバリデーションチェック
+      const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+      if (!emailRegex.test(email)) {
+        alert('有効なメールアドレスを入力してください');
+        return false;
+      }
+
+      // パスワードのバリデーションチェック
+      // パスワードの長さを判定するバリデーションチェックはlengthで変数の文字を測って実装する！！
+      if (password.length < 6) {
+        alert('パスワードは6文字以上で入力してください');
+        return false;
+      }
+
+      if (password === '') {
+        alert('パスワードを入力してください');
+        return false;
+      }
+
+      // バリデーションが成功した場合はフォームを送信
+      alert('バリデーションが成功しました');
+      return true;
+    }
+  </script>
+</head>
+
+<body>
+  <h2>バリデーションチェックのサンプルフォーム</h2>
+  <form onsubmit="return validateForm()">
+    <label for="name">名前:</label>
+    <input type="text" id="name" required><br><br>
+
+    <label for="email">メールアドレス:</label>
+    <input type="email" id="email" required><br><br>
+
+    <label for="password">パスワード:</label>
+    <input type="password" id="password" required><br><br>
+
+    <input type="submit" value="送信">
+  </form>
+</body>
+
+</html>
