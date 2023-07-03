@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>JavaScript Length Examples</title>
+</head>
+
+<body>
+  <div>
+    <input type="text" id="myInput" oninput="countCharacters()" placeholder="何か入力してください...">
+  </div>
+
+  <!-- 結果は <p> タグ内に表示。結果を表示するための <div> 要素と、各結果を表示するための <p> 要素 -->
+  <div id="resultDiv">
+    <p id="fruitsLength"></p>
+    <p id="messageLength"></p>
+    <p id="divElementsLength"></p>
+    <p id="charCount"></p>
+  </div>
+
+  <script>
+    // 配列の要素数を取得する例
+    var fruits = ['apple', 'banana', 'orange'];
+    var fruitsLength = fruits.length;
+    document.getElementById("fruitsLength").innerText = "Fruits length: " + fruitsLength;
+
+    // 文字列の長さを取得する例
+    var message = 'こんにちは';
+    var messageLength = message.length;
+    document.getElementById("messageLength").innerText = "Message length: " + messageLength;
+
+    // HTML要素の数を取得する例
+    var divElements = document.getElementsByTagName('div');
+    var divElementsLength = divElements.length;
+    document.getElementById("divElementsLength").innerText = "Number of div elements: " + divElementsLength;
+
+    // 応用例：テキストボックスの入力文字数のカウント
+    // 応用例の関数 countCharacters() が呼び出されると、文字数が <p> 要素に表示される
+    function countCharacters() {
+      var inputElement = document.getElementById('myInput');
+      var inputText = inputElement.value;
+      var charCount = inputText.length;
+      
+      // .innerTextは、JavaScriptで要素のテキストコンテンツを変更するために使用されるプロパティです。
+      // .innerTextプロパティを使用すると、指定した要素の内部テキストを取得または設定できます。これは、要素内に表示されるテキストの部分を参照します。
+      document.getElementById("charCount").innerText = "Character count: " + charCount;
+    }
+  </script>
+</body>
+
+</html>
