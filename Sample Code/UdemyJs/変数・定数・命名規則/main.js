@@ -36,4 +36,9 @@ let $tomato = 1;
 let tomato_1 = 1;
 
 // 数字は戦闘につけて定義してはいけない
-let 7tomatoCount;
+// let 7tomatoCount;
+
+//・・・・・・・・・・・・・・・・・・・・・・・・・・・・・ 変数に変数を代入・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・
+let mas = 1 + 1;
+let result = mas;
+console.log(result);
