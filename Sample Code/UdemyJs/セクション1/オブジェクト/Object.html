@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <h1>オブジェクト基礎</h1>
+    <script>
+      // オブジェクトとはまとまったデータを表すデータ型
+      // オブジェクトはキーとバリューのセットで構成されている
+      // オブジェクトは波カッコ{}で定義する
+      // キーとバリューのセットは「プロパティ」と呼ばれることがある
+      // キーとバリューの間は[:]つける
+      const coffee = {
+        name: 'Chocolate Mocha',
+        size: 350,
+        isHot: true,
+        // オブジェクトの中にオブジェクトを入れることも可能
+        nutrition: {
+          calories: 430,
+          sugars: 50,
+          caffeine: 5,
+        },
+      };
+      // オブジェクト全体を確認
+      console.log(coffee);
+
+      // オブジェクトの中の一部の値を確認
+      console.log(coffee.size);
+
+      // オブジェクトの値を変更する方法
+      coffee.isHot = false;
+
+      // 新しいプロパティを新たに追加する場合
+      coffee.barista = 'kaneda';
+      console.log(coffee);
+    </script>
+  </head>
+  <body></body>
+</html>
