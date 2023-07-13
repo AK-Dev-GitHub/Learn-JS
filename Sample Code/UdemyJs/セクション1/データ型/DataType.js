@@ -49,3 +49,30 @@ string = `hello
 
 taro`;
 console.log(string);
+
+// 文字列と数値型の結合
+// 入力画面からユーザが入力した値（想定）
+const userInput = '10';
+// 計算結果
+let calcResult;
+// 方法１ number関数をしようして文字列を数値に変換
+calcResult = Number(userInput) + 10;
+// 方法2 ParseIntを使用
+calcResult = parseInt(userInput) + 10;
+// 小数点の結合
+calcResult = parseFloat(userInput) + 10;
+// 「＋」を使用
+calcResult = +userInput + 10;
+console.log(calcResult);
+
+// 数字を文字列に変換
+const tenNumber = 10;
+
+calcResult = '10' + String(tenNumber);
+console.log(calcResult);
+
+calcResult = '10' + tenNumber.toString();
+console.log(calcResult);
+
+// 真偽値
+let boolean = true;
