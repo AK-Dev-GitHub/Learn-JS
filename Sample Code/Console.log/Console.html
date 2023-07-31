@@ -1,14 +1,13 @@
 <!DOCTYPE html>
 <html lang="ja">
+  <head>
+    <meta charset="utf-8" />
+    <title>Sample</title>
+    <h2>コンソールログテスト用ページへようこそ</h2>
+  </head>
 
-<head>
-  <meta charset="utf-8">
-  <title>Sample</title>
-  <h2>コンソールログテスト用ページへようこそ</h2>
-</head>
-
-<body>
-  <script>
+  <body>
+    <script>
       console.log('JavaScript');
       console.log(7);
       console.log(true);
@@ -25,7 +24,6 @@
       // このメソッドはコードのテストにも使用します。通常、コンソールに警告ログを出力するのに役立ちます。
       // デフォルトでは、警告メッセージは黄色で強調表示されます。
       console.warn('Warning!');
-      
 
       // この二つは併用するメソッドです。ブロックや関数の処理時間を知りたいときは、メソッドtime()とtimeEnd()を使用します。
       // どちらも引数として文字列を取ります。時間を計測するために、二つのメソッドには同じ文字列を使用してください。
@@ -34,7 +32,7 @@
 
       const hello = function () {
         console.log('処理時間計測ログ');
-      }
+      };
 
       hello(); // calling hello();
 
@@ -43,13 +41,11 @@
       // このメソッドは、可読性を上げるためコンソールに表形式で出力します。配列やオブジェクトを自動的に表形式にします。
       console.table({ a: 1, b: 2, c: 3 });
 
-
       // このメソッドはコンソールをクリアするために使用します。
       // コンソールがメッセージやエラーで一杯の時によく使われます。
-      // コンソールがクリアされ、コンソールに「Consolewas cleared」というメッセージが表示されます。
-      alert("コンソールログを削除しますか？");
-      console.clear()
-  </script>
-</body>
-
+      // コンソールがクリアされ、コンソールに「Console　was cleared」というメッセージが表示されます。
+      alert('コンソールログを削除しますか？');
+      console.clear();
+    </script>
+  </body>
 </html>
