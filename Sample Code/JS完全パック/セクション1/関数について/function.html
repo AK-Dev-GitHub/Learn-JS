@@ -4,40 +4,11 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <h1>関関数について</h1>
+    <h1>関数について</h1>
     <script>
-      // オブジェクトとはまとまったデータを表すデータ型
-      // オブジェクトはキーとバリューのセットで構成されている
-      // オブジェクトは波カッコ{}で定義する
-      // キーとバリューのセットは「プロパティ」と呼ばれることがある
-      // キーとバリューの間は[:]つける
-      const coffee = {
-        name: 'Chocolate Mocha',
-        size: 350,
-        isHot: true,
-        // オブジェクトの中にオブジェクトを入れることも可能
-        nutrition: {
-          calories: 430,
-          sugars: 50,
-          caffeine: 5,
-        },
-      };
-      // オブジェクト全体を確認
-      console.log(coffee);
-
-      // オブジェクトの中の一部の値を確認
-      console.log(coffee.size);
-
-      // オブジェクトの値を変更する方法
-      coffee.isHot = false;
-
-      // 新しいプロパティを新たに追加する場合
-      coffee.barista = 'kaneda';
-      console.log(coffee);
-
-      // 関数の作り方
+      // ----------------------ポイント1:関数の作り方--------------------------------
       // １function→2 関数名→ 3 丸カッコ()→ 4 波カッコ{}
-      // 関数の後ろにはセミコロンを付けない（重要）・{}(ブロック文)の後ろにはセミコロンをつけない
+      // 関数の後ろにはセミコロンを付けない（重要）/{}(ブロック文)の後ろにはセミコロンをつけない
       function add() {
         console.log(2 * 2);
       }
@@ -45,10 +16,20 @@
       // 関数呼び出し。関数は呼び出さなければ実行されない。つまり上記のコードだと実行されない。
       add();
 
+      function namaFunction() {
+        let name = 'kaneda';
+        console.log(name);
+      }
+
+      namaFunction();
+
+      // ----------------------ポイント2:関数は何度でも呼び出せる--------------------------------
       // 関数の超重要な特徴→何度も呼び出せる
       add();
       add();
       add();
+      namaFunction();
+      namaFunction();
     </script>
   </head>
   <body></body>
