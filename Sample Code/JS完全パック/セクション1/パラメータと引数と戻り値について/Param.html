@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <h1>パラメータと引数</h1>
+    <script>
+      // ----------------------ポイント1:パラメータの定義方法--------------------------------
+      // 関数の()カッコの中に引数を定義する
+      // num1とnum2（引数の受け口）のことをパラメータという
+      function add(num1, num2) {
+        console.log(num1 + num2);
+      }
+
+      function namePlus(name1, name2) {
+        console.log(name1, name2);
+      }
+
+      // ----------------------ポイント2:パラメータに追加の情報を受け渡すタイミング--------------------------------
+      //関数を呼び出す時に追加の情報を渡すことができる。ここではnum1とnum2に追加の情報（2と3）を渡している
+      // 渡す情報はカンマ区切りで定義する
+      // パラメータに渡す情報を「引数/argument」という
+      add(2, 3);
+      namePlus('kaneda', 'Akihiro');
+
+      // -----------------------------------------戻り値について---------------------------------------------------
+      // 関数の呼び出し元で関数の処理の結果を取得したい時に使用する
+      function returnNum(num3, num4) {
+        return num3 + num4;
+
+        // ↓実行されない。return文の後の処理は無視される
+        console.log('hello');
+      }
+
+      // 関数の呼び出し元に処理の結果が返却される
+      // 処理結果を戻り値という
+      const returnedValue = returnNum(3, 4);
+      console.log(returnedValue);
+    </script>
+  </head>
+  <body></body>
+</html>
