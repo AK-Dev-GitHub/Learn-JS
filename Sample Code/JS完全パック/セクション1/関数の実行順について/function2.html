@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <h1>関数の実行順</h1>
+    <script>
+      // ----------------------ポイント1:関数の位置-------------------------------
+      // 関数は呼び出してから関数を実行できる。前セクションと逆の順番
+      // JSは上から下に実行される→JSエンジンがコードを全て一読する→関数宣言文を見つけると自動で実行される順番が上になる
+      const returnValue = add(2, 3);
+      console.log(returnValue);
+
+      // 関数宣言
+      function add(num1, num2) {
+        return num1 + num2;
+      }
+
+      let testValue = testString('test', '成功');
+      console.log(testValue);
+
+      // 関数宣言
+      function testString(string1, string2) {
+        return string1 + string2;
+      }
+    </script>
+  </head>
+  <body>
+    <h1>Point1:JSは上から下に読み込まれる</h1>
+    <p>
+      JSは上から下に実行される→JSエンジンがコードを全て一読する→関数宣言文を見つけると自動で実行される順番が上になる
+    </p>
+  </body>
+</html>
