@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <h1>scopeについて</h1>
+    <script>
+      // ----------------------ポイント1:Scope-------------------------------
+      // 変数を参照できる範囲をscopeという
+      // 関数の中には変数や定数を宣言することができる
+      // 関数の中に定義した定数や変数は関数の外からはアクセスできない
+
+      // 関数の外に定義した変数や定数は関数からアクセス可能
+      // グローバル変数/グローバルscope（どこからでもアクセス可能）
+      const newValue = 'hello';
+
+      // 関数の中で定義された関数や変数は関数の中でしかアクセスできないと覚えておく
+      function add(num1, num2) {
+        // 関数の外に定義した変数にアクセス
+        console.log(newValue);
+
+        // 関数の「中」に定義した定数や変数
+        // ローカル変数（関数の中で定義したので関数内でしかアクセスできない）
+        const value = num1 + num2;
+        console.log(value);
+        return value;
+      }
+
+      const returnValue = add(2, 3);
+      console.log(returnValue);
+
+      // 関数の中に定義した定数や変数は関数の外からはアクセスできない
+      console.log(value);
+    </script>
+  </head>
+  <body>
+    <h1>Point1:scopeとは</h1>
+    <p>変数を参照できる範囲のこと</p>
+  </body>
+</html>
