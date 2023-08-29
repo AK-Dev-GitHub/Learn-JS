@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>onclickサンプル</title>
+    <script src="buttonClick1.js"></script>
+  </head>
+  <body>
+    <p>ボタンを押してください</p>
+    <!-- 学び1 buttonにIDをつけることでボタンを差別かしている -->
+    <input
+      id="button1"
+      type="button"
+      value="ボタンを押す？"
+      onclick="alertButton()"
+    />
+
+    <!-- 処理1が終了次第、処理2を呼び出すテストプログラム -->
+    <p>画面遷移ボタン</p>
+    <input
+      id="button2"
+      type="button"
+      value="画面遷移"
+      onclick="alertButton2()"
+    />
+  </body>
+</html>
