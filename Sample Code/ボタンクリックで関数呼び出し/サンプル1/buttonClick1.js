@@ -16,6 +16,7 @@ function moveNewPage() {
   alert(message3);
 }
 
+// TODO エラーあり
 // ボタンがクリックされたときの処理を定義
 button.addEventListener('click', () => {
   // 関数1の呼び出し

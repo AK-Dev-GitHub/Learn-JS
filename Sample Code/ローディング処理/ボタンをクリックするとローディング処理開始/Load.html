@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>ローディング処理</title>
+    <link rel="stylesheet" href="Load.css" />
+  </head>
+  <body>
+    <button id="spinier">ボタン</button>
+    <script>
+      // JavaScriptのコードは、「spinier」のid名を持つ要素がクリックされると発動します。発動した後は、
+      // 「spinier」のid名を持つボタンに「click」のclass名が付与されてCSSで形状が変わり、その文字列が <span class="circle"></span> に置き換えられます。
+      var button = document.getElementById('spinier');
+      document.getElementById('spinier').addEventListener('click', () => {
+        button.className = 'click';
+        button.innerHTML = '<span class="circle"></span>';
+        // 3秒後にクリック前の状態にボタンを戻す
+        setTimeout(function () {
+          button.className = button.className.replace('click', '');
+          button.innerHTML = 'ボタン';
+        }, 3000);
+      });
+    </script>
+  </body>
+</html>
