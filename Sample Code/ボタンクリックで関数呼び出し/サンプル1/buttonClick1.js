@@ -1,10 +1,26 @@
 function alertButton() {
-  const message = 'OKボタンを押してください';
-  alert(message);
+  const message1 = 'OKボタンを押してください';
+  alert(message1);
 }
 
-// TODO: アラートのOKボタンをクリック後に別の関数が呼び出される処理を実装する
+// HTMLの要素を取得
+const button = document.getElementById('button2');
+
 function alertButton2() {
-  const movePageMessage = '画面遷移に成功しました';
-  alert(movePageMessage);
+  const message2 = '画面遷移しますか？';
+  alert(message2);
 }
+
+function moveNewPage() {
+  const message3 = '画面遷移に成功しました';
+  alert(message3);
+}
+
+// ボタンがクリックされたときの処理を定義
+button.addEventListener('click', () => {
+  // 関数1の呼び出し
+  alertButton2();
+
+  // 関数1が終了した後に関数2を呼び出す
+  setTimeout(moveNewPage, 0);
+});
