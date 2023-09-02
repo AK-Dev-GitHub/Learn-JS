@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>ローディング処理</title>
+    <link rel="stylesheet" href="Load.css" />
+  </head>
+  <!-- ページ切り替え時のローディングアニメーションは、CSSでアニメーションの見た目を整えて、JavaScriptで発火のタイミングを指定します。 -->
+  <body>
+    <div id="loading">
+      <div class="loader"></div>
+    </div>
+    <script>
+      // JavaScriptは、window.onload でウィンドウが読み込まれ始めたタイミングで、.getElementById() で取得したidを持つ要素に .classList.add で「loaded」のclassを付与します
+      window.onload = function () {
+        const spinner = document.getElementById('loading');
+        // JavaScriptの .classList.add() は、要素に対してclassの追加を行うメソッド
+        spinner.classList.add('loaded');
+      };
+    </script>
+  </body>
+</html>

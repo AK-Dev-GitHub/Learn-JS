@@ -1,0 +1,51 @@
+/* ローディング処理背景設定 */
+#loading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+  background-color: #fffc50;
+  /* ローディング処理字間指定 */
+  transition: all 10s;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 9999;
+}
+/* ローディング処理の後半透過処理 */
+#loading.loaded {
+  opacity: 0;
+  visibility: hidden;
+}
+
+/* ローディングアニメーション */
+.loader,
+.loader:after {
+  border-radius: 50%;
+  width: 10em;
+  height: 10em;
+}
+.loader {
+  margin: 60px auto;
+  font-size: 10px;
+  position: relative;
+  text-indent: -9999em;
+  border-top: 1.1em solid rgba(255, 255, 255, 0.2);
+  border-right: 1.1em solid rgba(255, 255, 255, 0.2);
+  border-bottom: 1.1em solid rgba(255, 255, 255, 0.2);
+  border-left: 1.1em solid #545454;
+  transform: translateZ(0);
+  animation: loadAnime 1.1s infinite linear;
+}
+
+@keyframes loadAnime {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
