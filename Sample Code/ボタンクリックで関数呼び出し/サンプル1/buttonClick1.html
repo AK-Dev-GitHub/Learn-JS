@@ -3,7 +3,6 @@
   <head>
     <meta charset="UTF-8" />
     <title>onclickサンプル</title>
-    <script src="buttonClick1.js"></script>
   </head>
   <body>
     <p>ボタンを押してください</p>
@@ -23,5 +22,7 @@
       value="画面遷移"
       onclick="alertButton2()"
     />
+    <!-- ScriptタグはBodyタグの最後に仕込む（DOM生成前にHTML要素を読み込んでしまいエラーになるため） -->
+    <script src="buttonClick1.js"></script>
   </body>
 </html>
