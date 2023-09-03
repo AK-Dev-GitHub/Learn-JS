@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>ローディング処理</title>
+    <link rel="stylesheet" href="Load.css" />
+  </head>
+  <!-- スケルトンローディングは、ページのローディング時に各要素をローディング中であることが分かるようにするもので、個人的にも進捗が分かるUI -->
+  <div class="cards">
+    <!-- HTMLは「横並びのカード」と「縦並びのカード」の2種類を、それぞれ ul のリストタグを親コンテナにして、作っています。 -->
+    <!-- スケルトンローディングは、a タグのclassに「card」と一緒に「is-loading」を記述して、imgタグやpタグの中の要素をスケルトンにするようにします。 -->
+    <ul id="cardBlock">
+      <li class="card is-loading">
+        <a href="">
+          <div class="image">
+            <img
+              src="https://dubdesign.net/wp-content/uploads/2022/02/java_loadinganime-1024x587.jpg"
+              alt="カードの写真"
+            />
+          </div>
+          <div class="textContent">
+            <p class="textTitle">タイトル名</p>
+            <p class="textDesc">スケルトンローディング</p>
+          </div>
+        </a>
+      </li>
+      <li class="card is-loading">
+        <a href="">
+          <div class="image">
+            <img
+              src="https://dubdesign.net/wp-content/uploads/2022/02/java_loadinganime-1024x587.jpg"
+              alt="カードの写真"
+            />
+          </div>
+          <div class="textContent">
+            <p class="textTitle">タイトル名</p>
+            <p class="textDesc">スケルトンローディング</p>
+          </div>
+        </a>
+      </li>
+    </ul>
+
+    <ul id="cardBlockVertical">
+      <li class="card is-loading vertical">
+        <a href="">
+          <div class="image">
+            <img
+              src="https://dubdesign.net/wp-content/uploads/2022/02/java_loadinganime-1024x587.jpg"
+              alt="カードの写真"
+            />
+          </div>
+          <div class="textContent">
+            <p class="textTitle">タイトル名タイトル名タイトル名</p>
+            <p class="textDesc">
+              テキストテキストテキストテキストテキストテキストテキスト
+            </p>
+          </div>
+        </a>
+      </li>
+      <li class="card is-loading vertical">
+        <a href="">
+          <div class="image">
+            <img
+              src="https://dubdesign.net/wp-content/uploads/2022/02/java_loadinganime-1024x587.jpg"
+              alt="カードの写真"
+            />
+          </div>
+          <div class="textContent">
+            <p class="textTitle">タイトル名</p>
+            <p class="textDesc">
+              テキストテキストテキストテキストテキストテキストテキスト
+            </p>
+          </div>
+        </a>
+      </li>
+    </ul>
+
+    <!-- インナー2 -->
+  </div>
+  <body>
+    <script>
+      // JavaScriptの setTimeout() は、一定時間後に一度だけ特定の処理をおこなうメソッドです。
+      setTimeout(() => {
+        document.querySelectorAll('.card').forEach((skel) => {
+          skel.classList.remove('is-loading');
+        });
+      }, 4000);
+    </script>
+  </body>
+</html>

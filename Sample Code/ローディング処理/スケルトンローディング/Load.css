@@ -1,0 +1,139 @@
+/* ローディング中に表示するスケルトンのオーバーレイを :before の擬似要素で作ります。
+そして、それを光らせるアニメーションと、ローディング完了後に要素をフェードインさせるよう @keyframes で指定して、
+「.is-loading」がついた時にそれらがアニメーションするようにプロパティで記述します。 */
+/* インナー1 */
+ul#cardBlock {
+  margin: 15px 0;
+  list-style: none;
+  padding: 0;
+  border: 0;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  /* TODO: ググる */
+  gap: 20px;
+}
+li.card {
+  width: 48%;
+  position: relative;
+}
+/* 写真下のカードコンポーネント装飾 */
+li.card a {
+  border-radius: 2px;
+  background: #fff;
+  box-shadow: 0 0 3px 0 rgb(0 0 0 / 12%), 0 2px 3px 0 rgb(0 0 0 / 22%);
+  cursor: pointer;
+  transition: 0.2s ease-in-out;
+  display: flex;
+  flex-direction: column;
+  text-decoration: none;
+  height: 100%;
+}
+/*  */
+li.card a:hover {
+  box-shadow: 0 15px 30px -5px rgb(0 0 0 / 15%), 0 0 5px rgb(0 0 0 / 10%);
+  transform: translateY(-4px);
+}
+li.card .image {
+  position: relative;
+}
+/* カードコンポーネント内の文字装飾 */
+li.card a p {
+  -webkit-text-stroke-color: #707070;
+  margin: 0;
+  font-size: 1.2rem;
+  line-height: 1;
+  position: relative;
+}
+.card a .textContent {
+  padding: 18px 20px;
+  flex-grow: 1;
+}
+.textContent p.textTitle {
+  margin-bottom: 8px;
+  font-weight: 600;
+  display: inline-block;
+  line-height: 1.5;
+}
+.textContent .textDesc {
+  font-size: 1rem;
+  color: #707070;
+  line-height: 1.5;
+}
+
+/* インナー2 */
+ul#cardBlockVertical {
+  margin: 15px 0;
+  padding: 0;
+  list-style: none;
+  border: none;
+  gap: 15px;
+  display: flex;
+  flex-direction: column;
+}
+li.card.vertical {
+  width: 100%;
+}
+li.card.vertical a {
+  flex-direction: row;
+  padding: 10px;
+  align-items: center;
+}
+li.card.vertical a .image {
+  width: 45%;
+}
+li.card.vertical .textContent {
+  padding: 0;
+  padding-left: 20px;
+}
+@media screen and (max-width: 767px) {
+  /* （ここにモバイル用スタイルを記述） */
+  ul#cardBlock li,
+  li.card.vertical a {
+    width: 100%;
+    flex-direction: column;
+  }
+  li.card.vertical a {
+    padding: 0;
+  }
+  li.card.vertical a .image {
+    width: 100%;
+  }
+  li.card.vertical .textContent {
+    padding: 18px 20px;
+  }
+}
+
+/* 共通アニメーション */
+/* ローディング */
+.card.is-loading .image:before,
+.card.is-loading p:before {
+  content: '';
+  background: #eee;
+  background: linear-gradient(110deg, #ececec 8%, #f5f5f5 18%, #ececec 33%);
+  border-radius: 5px;
+  background-size: 200% 100%;
+  animation: 1.5s shine linear infinite, 4s fadeout ease-in;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+@keyframes shine {
+  to {
+    background-position-x: -200%;
+  }
+}
+@keyframes fadeout {
+  0% {
+    opacity: 1;
+  }
+  95% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
