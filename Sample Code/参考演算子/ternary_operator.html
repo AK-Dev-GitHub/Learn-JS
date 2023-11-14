@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>参考演算子のサンプル</title>
+  </head>
+  <body>
+    <div class="checkNum">
+      <label for="numberInput">数値を入力してください:</label>
+      <input type="number" id="numberInput" />
+
+      <button onclick="checkNumber()">確認する</button>
+    </div>
+
+    <p id="resultMessage2"></p>
+
+    <script>
+      function checkNumber() {
+        // 入力値を取得
+        let inputNum = document.getElementById('numberInput').value;
+
+        // 入力が数字であることを確認
+        if (!isNaN(inputNum)) {
+          // 参考演算子を使用して偶数か奇数かを判定し、メッセージを表示
+          const resultMessage =
+            inputNum % 2 === 0
+              ? '入力した数は偶数です。'
+              : '入力した数は奇数です。';
+
+          // 結果を表示
+          document.getElementById('resultMessage').innerText = resultMessage;
+        } else {
+          // 数字でない場合のエラーメッセージ
+          document.getElementById('resultMessage').innerText =
+            '有効な数値を入力してください。';
+        }
+      }
+    </script>
+  </body>
+</html>
