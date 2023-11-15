@@ -12,6 +12,17 @@
 
       <button onclick="checkNumber()">確認する</button>
     </div>
+
+    <div class="checkInputValue">
+      <label for="letterInput">文字または数字を入力してください:</label>
+      <input type="number" id="inputValue" />
+
+      <button onclick="checkInputValue()">確認する</button>
+    </div>
+
+    <p id="resultMessage"></p>
+    <p id="resultMessage2"></p>
+
     <script>
       // 気づき→if文の中に参考演算子を組み込んでいる→可読性の向上
       function checkNumber() {
@@ -32,6 +43,22 @@
           // 数字でない場合のエラーメッセージ
           document.getElementById('resultMessage').innerText =
             '有効な数値を入力してください。';
+        }
+      }
+
+      // 金田オリジナルコード--文字が入力されたらメッセージを表示する・入力されずボタンがクリックされたらアラートを表示する
+      function checkInputValue() {
+        // ローカルscope内に変数を定義
+        let inputValue = document.getElementById('inputValue').value;
+        // 入力があるかどうかを判別
+        if (inputValue !== null) {
+          const resultMessage2 = !isNaN(inputValue)
+            ? '文字です。'
+            : '数字です。';
+        } else {
+          // 文字・数字でない場合のエラーメッセージ
+          document.getElementById('resultMessage2').innerText =
+            alert('有効な数値を入力してください。');
         }
       }
     </script>
