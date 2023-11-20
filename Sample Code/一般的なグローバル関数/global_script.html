@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+  <body>
+    <h2>JavaScript Global Functions</h2>
+
+    <p id="demo"></p>
+
+    <script>
+      // parseInt: 文字列を整数に変換します
+      var a = parseInt('10');
+      // parseFloat: 文字列を浮動小数点数に変換します
+      var b = parseFloat('10.33');
+      // isNaN: 与えられた値がNaN（Not a Number）であるかどうかをチェックします
+      var c = isNaN('Hello');
+      // isFinite: 与えられた値が有限数であるかどうかをチェックします
+      var d = isFinite('9999');
+
+      // decodeURI: URIをデコードします。これは、エンコードされたURIから特殊文字を元の形式に戻します。
+      // 例えば、エンコードされた日本語の文字列を人間が読める形式に戻します。
+      var e = decodeURI('https://www.example.com/?name=テスト');
+
+      // encodeURI: URIをエンコードします。これは、特殊文字をURIとして安全に使用できる形式に変換します。
+      // 例えば、日本語の文字列をURLパラメータとして安全に使用できる形式に変換します。
+      var f = encodeURI('https://www.example.com/?name=テスト');
+
+      // decodeURIComponent: URIコンポーネントをデコードします。これは、エンコードされたURIコンポーネントから特殊文字を元の形式に戻します。
+      // 例えば、エンコードされた日本語の文字列を人間が読める形式に戻します。
+      var g = decodeURIComponent(
+        'JavaScript%20%E3%83%81%E3%83%A5%E3%83%BC%E3%83%88%E3%83%AA%E3%82%A2%E3%83%AB'
+      );
+
+      // encodeURIComponent: URIコンポーネントをエンコードします。これは、特殊文字をURIコンポーネントとして安全に使用できる形式に変換します。
+      // 例えば、日本語の文字列をURLパラメータとして安全に使用できる形式に変換します。
+      var h = encodeURIComponent('JavaScript チュートリアル');
+      document.getElementById('demo').innerHTML =
+        a +
+        '<br>' +
+        b +
+        '<br>' +
+        c +
+        '<br>' +
+        d +
+        '<br>' +
+        e +
+        '<br>' +
+        f +
+        '<br>' +
+        g +
+        '<br>' +
+        h;
+    </script>
+  </body>
+</html>
