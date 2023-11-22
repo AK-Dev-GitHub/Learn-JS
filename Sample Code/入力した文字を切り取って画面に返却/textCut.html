@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>文字カット</title>
+  </head>
+  <body>
+    <!-- 文字を入力し、ボタンを押下した入力値を頭文字カット関数に受け渡す -->
+    <input id="text" placeholder="文字を入力してください" />
+    <button onclick="textCut()">文字カット</button>
+    <!-- 結果を表示するテキスト欄 -->
+    <p id="result"></p>
+    <!-- 頭文字をカットし、HTMLの結果テキスト欄に表示 -->
+    <script>
+      // 頭文字カット関数
+      function textCut() {
+        // 入力値を取得
+        let inputText = document.getElementById('text').value;
+        // 入力値の後ろから2文字目までを残して、後の文字はカット
+        let result = inputText.slice(-3);
+        // 結果を表示
+        document.getElementById('result').innerText = result;
+      }
+    </script>
+  </body>
+</html>
