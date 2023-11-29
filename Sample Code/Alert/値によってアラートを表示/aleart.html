@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>アラート表示</title>
+  </head>
+  <body>
+    <input type="text" id="inputValue" placeholder="値を入力してください" />
+    <button onclick="showAlert()">アラート表示</button>
+  </body>
+  <script>
+    function showAlert() {
+      var inputValue = document.getElementById('inputValue').value;
+      if (inputValue === '1') {
+        alert('値が1です');
+      } else if (inputValue === '2') {
+        alert('値が2です');
+      } else {
+        alert('その他の値です');
+      }
+    }
+  </script>
+</html>
