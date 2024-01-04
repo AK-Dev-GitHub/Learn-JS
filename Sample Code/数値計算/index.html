@@ -5,5 +5,41 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>数値計算</title>
   </head>
-  <body></body>
+  <body>
+    <!-- 足し算計算するフォーム -->
+    <span class="addition"
+      ><form onsubmit="event.preventDefault(); calculateAddition();">
+        <label for="addition">数値1:</label>
+        <input
+          type="number"
+          id="numAddition1"
+          placeholder="数値入力してください"
+          name="numAddition1"
+          required
+        />
+        <label for="addition">数値2:</label>
+        <input
+          type="number"
+          id="numAddition2"
+          placeholder="数値入力してください"
+          name="numAddition2"
+          required
+        />
+        <input type="submit" id="submitAddition" value="計算する" /></form
+    ></span>
+    <!-- 足し算計算結果を表示するテキスト欄 -->
+    <p id="result-addition"></p>
+    <!-- 足し算した数値を計算し、HTMLの結果テキスト欄に表示 -->
+    <script>
+      function calculateAddition() {
+        // 入力値を取得
+        let num1 = document.getElementById('numAddition1').value;
+        let num2 = document.getElementById('numAddition2').value;
+        // 数値を計算
+        let result = Number(num1) + Number(num2);
+        // 計算結果を表示
+        document.getElementById('result-addition').innerText = result;
+      }
+    </script>
+  </body>
 </html>
