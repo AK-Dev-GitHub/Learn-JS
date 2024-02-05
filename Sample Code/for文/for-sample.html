@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>for文サンプル</title>
+  </head>
+  <body>
+    <h1>for文サンプル</h1>
+    <h2>ソースを見ながらF12で確認してみてね</h2>
+  </body>
+  <script>
+    // for (初期化式; 条件式; 増減式)の公式
+    //Hello, World!を10回コンソールに表示する
+    for (let i = 0; i < 10; i++) {
+      console.log('Hello, World!');
+    }
+    // if (member) {
+    //   for (let member = 0; member < 10; member++) {
+    //     console.log(member);
+    //   }
+    //   console.log('メンバーがいません');
+    // }
+
+    let memberCount = 5;
+    if (memberCount > 0) {
+      for (let memberCount = 0; memberCount < 10; memberCount++) {
+        console.log(memberCount + '人目のメンバー');
+      }
+    } else {
+      console.log('メンバーがいません');
+    }
+  </script>
+</html>
