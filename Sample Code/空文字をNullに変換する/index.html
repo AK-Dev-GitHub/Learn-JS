@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>空文字をNullに変換する</title>
+  </head>
+  <body>
+    <h1>空文字をNullに変換する</h1>
+    <input type="text" id="inputField" />
+    <button onclick="convertEmptyToNull()">Submit</button>
+  </body>
+  <script>
+    function convertEmptyToNull() {
+      let str = document.getElementById('inputField').value;
+      str = str.trim();
+      if (str === '') {
+        str = null;
+      }
+      console.log(str);
+    }
+  </script>
+</html>
