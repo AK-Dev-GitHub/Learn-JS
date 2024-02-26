@@ -10,7 +10,24 @@
   <script>
     // 配列に新しい要素を追加する
     const testArray = [1, 2, 3, 4, 5];
-    testArray.push(6);
+    const pushed = testArray.push(6);
     console.log(testArray);
+    console.log(pushed);
+
+    // 配列の先頭から要素を削除する
+    const testArray2 = ['kaneda', 'tanaka', 'kobayashi'];
+    const shifted = testArray2.shift();
+    console.log(testArray2);
+    console.log(shifted);
+
+    // 配列の要素を指定した並び順にソートする
+    // 引数 firstNum の値が secondNum より大きければ 0 より大きい値が返され、小さければ 0 より小さい値が返されます。
+    let num = [500, 27, 12, 41];
+
+    num.sort(function (firstNum, secondNum) {
+      return firstNum - secondNum;
+    });
+
+    console.log(num);
   </script>
 </html>

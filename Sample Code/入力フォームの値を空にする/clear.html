@@ -6,54 +6,17 @@
     <title>入力フォームの値を空にする</title>
   </head>
   <body>
-    <div>
-      <input type="text" id="form1" />
+    <div class="num-form">
+      <input type="number" id="form1" />
       <input type="button" value="入力内容クリア" onclick="clearText()" />
     </div>
-
-    <div>
-      <textarea id="form2" cols="30" rows="4"></textarea>
-      <input type="button" value="入力内容クリア" onclick="clearTextarea()" />
-    </div>
-
-    <!-- 金田オリジナルコード -->
-    <div class="num-form">
-      <input type="number" id="form3" />
-      <input type="button" value="入力内容クリア" onclick="clearNumarea()" />
-    </div>
-
-    <!-- 金田オリジナルコード2 -->
-    <div class=""></div>
   </body>
-  <!-- フォームclear関数  -->
   <script>
     function clearText() {
       // 要素のidを指定して値を読み込む
       let textForm = document.getElementById('form1');
       // 空文字を指定して要素の値をclearする
       textForm.value = '';
-    }
-
-    function clearTextarea() {
-      // 要素のidを指定して値を読み込む
-      let textareaForm = document.getElementById('form2');
-      // 空文字を指定して要素の値をclearする
-      textareaForm.value = '';
-    }
-
-    // 金田オリジナルコード 修正前-正常に動かない
-    // let numareaForm = function clearNumarea() {
-    //   let textForm = document.getElementById('form3');
-    //   numareaForm.value = '';
-    // };
-
-    // 金田オリジナルコード修正後
-    // 関数の宣言にfunctionキーワードが必要です。
-    // let numareaFormは不要であり、let textFormをlet numareaFormに変更しました。
-    // numareaForm.valueではなく、textForm.valueを使用してください。
-    function clearNumarea() {
-      let numareaForm = document.getElementById('form3');
-      numareaForm.value = '';
     }
   </script>
 </html>
