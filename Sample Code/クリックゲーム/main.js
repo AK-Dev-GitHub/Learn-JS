@@ -34,53 +34,22 @@ clickBtn.addEventListener('click', function () {
 
         if (score < 100) {
           scoreDisplay.textContent = 'ゲームオーバー';
-          alert('ゲームオーバー');
+          setTimeout(function () {
+            alert('ゲームオーバー');
+          }, 0);
           showLoadingAndReload();
         }
       }
 
-      // 残り時間が20秒になったらボタンの位置をランダムに変更
-      const rules = document.getElementById('rules');
-      const rulesHeight = rules.offsetHeight;
+      // 残り時間が指定の秒数になったらボタンの位置をランダムに変更
       if (timeLeft === 20) {
-        const x = Math.random() * (window.innerWidth - clickBtn.offsetWidth);
-        const y =
-          Math.random() *
-            (window.innerHeight - clickBtn.offsetHeight - rulesHeight) +
-          rulesHeight;
-        clickBtn.style.position = 'absolute';
-        clickBtn.style.left = `${x}px`;
-        clickBtn.style.top = `${y}px`;
+        moveButton();
       } else if (timeLeft === 15) {
-        // 残り時間が10秒になったらボタンの位置をランダムに変更
-        const x = Math.random() * (window.innerWidth - clickBtn.offsetWidth);
-        const y =
-          Math.random() *
-            (window.innerHeight - clickBtn.offsetHeight - rulesHeight) +
-          rulesHeight;
-        clickBtn.style.position = 'absolute';
-        clickBtn.style.left = `${x}px`;
-        clickBtn.style.top = `${y}px`;
+        moveButton();
       } else if (timeLeft === 10) {
-        // 残り時間が10秒になったらボタンの位置をランダムに変更
-        const x = Math.random() * (window.innerWidth - clickBtn.offsetWidth);
-        const y =
-          Math.random() *
-            (window.innerHeight - clickBtn.offsetHeight - rulesHeight) +
-          rulesHeight;
-        clickBtn.style.position = 'absolute';
-        clickBtn.style.left = `${x}px`;
-        clickBtn.style.top = `${y}px`;
+        moveButton();
       } else if (timeLeft === 5) {
-        // 残り時間が10秒になったらボタンの位置をランダムに変更
-        const x = Math.random() * (window.innerWidth - clickBtn.offsetWidth);
-        const y =
-          Math.random() *
-            (window.innerHeight - clickBtn.offsetHeight - rulesHeight) +
-          rulesHeight;
-        clickBtn.style.position = 'absolute';
-        clickBtn.style.left = `${x}px`;
-        clickBtn.style.top = `${y}px`;
+        moveButton();
       }
     }, 1000); // 1000ミリ秒 = 1秒
   }
@@ -100,4 +69,18 @@ function showLoadingAndReload() {
   setTimeout(function () {
     location.reload();
   }, 3000); // 3000ミリ秒 = 3秒
+}
+
+// ボタン移動関数（同じ処理を複数仕様するので関数化）
+// ボタン移動関数（同じ処理を複数仕様するので関数化）
+function moveButton() {
+  const rules = document.getElementById('rules');
+  const rulesHeight = rules.offsetHeight;
+  const x = Math.random() * (window.innerWidth - clickBtn.offsetWidth);
+  const y =
+    Math.random() * (window.innerHeight - clickBtn.offsetHeight - rulesHeight) +
+    rulesHeight;
+  clickBtn.style.position = 'absolute';
+  clickBtn.style.left = `${x}px`;
+  clickBtn.style.top = `${y}px`;
 }

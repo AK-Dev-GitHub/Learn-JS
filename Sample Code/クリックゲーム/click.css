@@ -37,7 +37,12 @@ p {
   border-radius: 5px;
   z-index: 1;
 }
-
+#timer-container {
+  position: absolute;
+  top: 295px;
+  right: 550px;
+  font-size: large;
+}
 #loading {
   display: none;
   position: fixed;
