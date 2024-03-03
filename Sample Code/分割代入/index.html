@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>分割代入</title>
+  </head>
+  <body>
+    <script>
+      // 分割代入をしていない例
+      const name = 'kaneda tanaka satou';
+      let name1 = name.split(' ')[0];
+      let name2 = name.split(' ')[1];
+      let name3 = name.split(' ')[2];
+      console.group('name');
+      console.log(name1);
+      console.log(name2);
+      console.log(name3);
+      console.groupEnd();
+
+      // 配列を分割代入をしている例
+      const fruit = 'apple orange banana';
+      let [a, b, c] = fruit.split(' ');
+      console.group('fruit');
+      console.table([a, b, c]);
+      console.groupEnd();
+
+      // オブジェクトを分割代入をしている例
+      const languages = {
+        ja: '日本語',
+        en: '英語',
+      };
+      // オブジェクトのプロパティを分割代入
+      const { ja, en } = languages;
+
+      console.log(ja, en); // 出力 : 日本語 英語
+    </script>
+  </body>
+</html>
