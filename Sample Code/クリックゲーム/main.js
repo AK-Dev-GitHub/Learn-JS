@@ -72,7 +72,6 @@ function showLoadingAndReload() {
 }
 
 // ボタン移動関数（同じ処理を複数仕様するので関数化）
-// ボタン移動関数（同じ処理を複数仕様するので関数化）
 function moveButton() {
   const rules = document.getElementById('rules');
   const rulesHeight = rules.offsetHeight;
