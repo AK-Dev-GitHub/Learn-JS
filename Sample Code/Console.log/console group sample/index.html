@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>console groupサンプル</title>
+  </head>
+  <body>
+    <script>
+      // グループ化されたログを出力
+      console.group('グループ1');
+      console.log('ログ1');
+      console.log('ログ2');
+      console.log('ログ3');
+      console.groupEnd();
+
+      // コンソールテーブルとコンソールgroupを併用
+      const company = { id: 1, name: 'kaneda', age: 26 };
+      const workType = { id: 1, name: 'engineer' };
+      console.group('オブジェクトのログ');
+      console.table(company);
+      console.table(workType);
+      console.trace();
+      console.groupEnd();
+    </script>
+  </body>
+</html>
