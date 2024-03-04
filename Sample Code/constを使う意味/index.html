@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>constを使う意味</title>
+  </head>
+  <body>
+    <input type="text" id="name" />
+    <button onclick="handlingName()">submit</button>
+    <script>
+      // 変数が意図しない値の書き換えが起こらないようにコーディングする意識をもつ（関数ごとにconstを宣言して処理した値を一時的に保存するなど）
+      // また、constで宣言することによって、変数のスコープがわかりやすくなる
+      function handlingName() {
+        const name = document.getElementById('name').value;
+        if (name === 'Kaneda') {
+          console.log('名前が一致しました');
+        } else if (name === '') {
+          console.error('名前が一致しません');
+        }
+      }
+    </script>
+  </body>
+</html>

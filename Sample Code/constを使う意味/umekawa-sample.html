@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>constを使う意味</title>
+  </head>
+  <body>
+    <script>
+      // 変数の scope について
+
+      var test = '';
+
+      const hoge = function () {
+        for (let i = 0; i < 10; i++) {
+          test = i;
+        }
+
+        if (result) {
+          test = true;
+        }
+
+        const piyo = new Piyo();
+
+        piyo.update(test);
+
+        console.log(test);
+      };
+
+      test = 'うんち';
+
+      hoge();
+
+      test = 'うんち';
+
+      // 関数
+
+      const Hoge = function (test) {
+        this.test = test;
+      };
+
+      const hoge = new Hoge('hoge');
+
+      console.log(hoge.test);
+
+      // Class
+
+      class Fuga {
+        constructor(test) {
+          this.test = test;
+        }
+      }
+
+      const fuga = new Fuga('fuga');
+
+      fuga.test;
+    </script>
+  </body>
+</html>

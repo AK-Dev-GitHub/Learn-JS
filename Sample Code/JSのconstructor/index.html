@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>constructorサンプル</title>
+  </head>
+  <body>
+    <script>
+      // JSにおけるcontractorは関数のこと
+      // オブジェクトのコンストラクタを定義
+      // JSには「クラス」といいう概念がないため、関数を使ってオブジェクトを生成する
+      // JSはすべてが実態と覚えておく
+      // 要するに関数の書きかたの違いと覚えておく。JS
+      // 関数の宣言/変数の宣言の仕方によってscope（その変数が影響を受ける範囲）がことなる→constで宣言することによって値が上書きされないので基本的にconstで定義する。
+      function Person(name, age) {
+        this.name = name;
+        this.age = age;
+      }
+
+      // インスタンスを生成
+      const person1 = new Person('kaneda', 30);
+      const person2 = new Person('tanaka', 25);
+      const person3 = new Person('satou', 20);
+
+      console.group('person');
+      console.log(person1);
+      console.log(person2);
+      console.log(person3);
+      console.groupEnd();
+    </script>
+  </body>
+</html>
