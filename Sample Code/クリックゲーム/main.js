@@ -42,7 +42,9 @@ clickBtn.addEventListener('click', function () {
       }
 
       // 残り時間が指定の秒数になったらボタンの位置をランダムに変更
-      if (timeLeft === 20) {
+      if (timeLeft === 25) {
+        moveButton();
+      } else if (timeLeft === 20) {
         moveButton();
       } else if (timeLeft === 15) {
         moveButton();
