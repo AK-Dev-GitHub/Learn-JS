@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>
+      JavaScript である値がオブジェクト型であることを判定する変なテク
+    </title>
+  </head>
+  <body></body>
+  <script>
+    // 関数 isObject を定義します。この関数は引数 x を受け取り、
+    // x がオブジェクトであるかどうかを判定します。
+    function isObject(x) {
+      // Object(x) === x の結果を返します。これは、x がオブジェクトである場合に限り true になります。
+      return Object(x) === x;
+    }
+
+    // 以下の行では、様々な値に対して isObject 関数を呼び出し、その結果をコンソールに出力します。
+
+    console.log(isObject({})); // 空のオブジェクトをテストします。結果は true です。
+    console.log(isObject([])); // 空の配列をテストします。結果は true です。
+    console.log(isObject(null)); // null をテストします。結果は false です。
+    console.log(isObject(undefined)); // undefined をテストします。結果は false です。
+    console.log(isObject(1)); // 数値をテストします。結果は false です。
+    console.log(isObject('')); // 空文字列をテストします。結果は false です。
+    console.log(isObject(true)); // 真偽値をテストします。結果は false です。
+    console.log(isObject(Symbol())); // シンボルをテストします。結果は false です。
+    console.log(isObject(() => {})); // 関数をテストします。結果は true です。
+  </script>
+</html>
