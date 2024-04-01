@@ -6,7 +6,13 @@
       JavaScript である値がオブジェクト型であることを判定する変なテク
     </title>
   </head>
-  <body></body>
+  <body>
+    <h1>JavaScript である値がオブジェクト型であることを判定する変なテク</h1>
+    <ul>
+      <li>配列もオブジェクトである</li>
+      <li>関数もオブジェクトである</li>
+    </ul>
+  </body>
   <script>
     // 関数 isObject を定義します。この関数は引数 x を受け取り、
     // x がオブジェクトであるかどうかを判定します。
@@ -17,14 +23,44 @@
 
     // 以下の行では、様々な値に対して isObject 関数を呼び出し、その結果をコンソールに出力します。
 
+    // オブジェクトオブジェクト→メソッドを持てる＋状態を持つ
+    const Object = {
+      name: 'Taro',
+      age: 20,
+      // 状態をメソッドで変更できる
+      sayHello: function () {
+        this.age = 21;
+      },
+    };
     console.log(isObject({})); // 空のオブジェクトをテストします。結果は true です。
+
+    // Arrayオブジェクト
+    // Arrayオブジェクトは、配列を操作するためのメソッドを提供するオブジェクトです。
+    // 自分自身の値を変更できるから原始的ではない
     console.log(isObject([])); // 空の配列をテストします。結果は true です。
+
+    // 関数オブジェクト
+    const func = function () {
+      let a = 1;
+      return {
+        increment: function () {
+          a++;
+        },
+      };
+    };
+    const test = func();
+    test.increment();
+    // 関数オブジェクトは、関数を操作するためのメソッドを提供するオブジェクトです。
+    // つまり状態を操作できるので原始的ではない
+    console.log(isObject(() => {})); // 関数をテストします。結果は true です。
+
+    // JSにおけるプリミティブ型（意味:素朴なデータ型）
+    // プリミティブ型の値は、その値そのものが変数に格納される。
     console.log(isObject(null)); // null をテストします。結果は false です。
     console.log(isObject(undefined)); // undefined をテストします。結果は false です。
     console.log(isObject(1)); // 数値をテストします。結果は false です。
     console.log(isObject('')); // 空文字列をテストします。結果は false です。
     console.log(isObject(true)); // 真偽値をテストします。結果は false です。
     console.log(isObject(Symbol())); // シンボルをテストします。結果は false です。
-    console.log(isObject(() => {})); // 関数をテストします。結果は true です。
   </script>
 </html>
