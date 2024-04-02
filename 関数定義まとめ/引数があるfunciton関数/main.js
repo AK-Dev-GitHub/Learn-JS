@@ -10,7 +10,9 @@ greet(name);
 
 // オリジナル関数
 function personalInfo(pInfo) {
-  console.table(`${pInfo}この情報で会員登録しますか？`);
+  console.log(
+    `名前: ${pInfo.name}, パスワード: ${pInfo.password}, 電話番号: ${pInfo.tel} この情報で会員登録しますか？`
+  );
 }
 
 // ブラウザのダイアログで名前を入力→name変数に代入
