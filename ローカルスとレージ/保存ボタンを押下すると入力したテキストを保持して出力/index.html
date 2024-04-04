@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>LocalStorage Example</title>
+    <script>
+      // データの読み込み
+      function load() {
+        // getItemの中身がキーになる
+        let mydata = localStorage.getItem('mydata');
+        document.getElementById('mydata_out').innerText = mydata;
+        console.log('出力しました: ' + mydata);
+      }
+
+      // データの保存
+      function save() {
+        let mydata = document.getElementById('mydata_in').value;
+        console.log('保存しました: ' + mydata);
+        // setItemの中身がキーとバリューになる
+        localStorage.setItem('mydata', mydata);
+      }
+    </script>
+  </head>
+  <body>
+    <h1>LocalStorageに保存する値を入力してください</h1>
+    <input id="mydata_in" type="text" value="" />
+    <br />
+    <button onclick="load();">読み込み</button>
+    <button onclick="save();">保存</button>
+    <br /><br />
+    <div id="mydata_out"></div>
+  </body>
+</html>
