@@ -1,7 +1,7 @@
 # ■Index
 - [About Learn-JS](#about-learn-js)
 - [About Me](#about-me)
-  - [SNS](#sns)
+  - [ZENN Account](#zenn-account)
   - [Skill](#skill)
 ---
 # ■About Learn-JS
@@ -10,8 +10,8 @@
 ### This repository is for personal study of JavaScript. It contains sample code for functions, log output, local storage, asynchronous processing, etc.
 ---
 # ■About Me
-## SNS
+## 🔸ZENN Account
 [![Followers](https://badgen.org/img/zenn/milk_code/followers?style=for-the-badge&label=ZENN%E3%82%A2%E3%82%AB%E3%82%A6%E3%83%B3%E3%83%88)](https://zenn.dev/milk_code)
-## Skill
+## 🔸Skill
 [![My Skills](https://skillicons.dev/icons?i=js,html,css,wasm)](https://skillicons.dev)
 
