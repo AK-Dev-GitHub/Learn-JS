@@ -21,4 +21,4 @@
 ## 🔸Other Skills
 [![My Skills](https://skillicons.dev/icons?i=notion,vscode,vercel,postman,gitlab,github)](https://skillicons.dev)
 ## 🔸interested in & studying
-[![My Skills](https://skillicons.dev/icons?i=swift,linux,sass,xd,rubyjest,go,docker)](https://skillicons.dev)
+[![My Skills](https://skillicons.dev/icons?i=swift,linux,sass,xd,ruby,jest,go,docker)](https://skillicons.dev)
