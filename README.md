@@ -1,5 +1,8 @@
 # ■Index
-- [About Learn-JS](#About Learn-JS)
+- [About Learn-JS](#about-learn-js)
+- [About Me](#about-me)
+  - [SNS](#sns)
+  - [Skill](#skill)
 ---
 # ■About Learn-JS
 ![image](https://github.com/KanedaAkihiro/Learn-JS/assets/101224342/11ca8ece-7fdf-4da5-bd59-b16a825cef32)
