@@ -20,3 +20,5 @@
 [![My Skills](https://skillicons.dev/icons?i=eclipse,java,spring,prisma,supabase)](https://skillicons.dev)
 ## 🔸Other Skills
 [![My Skills](https://skillicons.dev/icons?i=notion,vscode,vercel,postman,gitlab,github)](https://skillicons.dev)
+## 🔸interested in & studying
+[![My Skills](https://skillicons.dev/icons?i=swift,linux,sass,xd,rubyjest,go,docker)](https://skillicons.dev)
