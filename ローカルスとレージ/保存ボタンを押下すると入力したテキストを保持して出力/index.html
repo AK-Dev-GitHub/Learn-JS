@@ -5,7 +5,6 @@
     <script>
       // データの読み込み
       function load() {
-        // getItemの中身がキーになる
         let mydata = localStorage.getItem('mydata');
         document.getElementById('mydata_out').innerText = mydata;
         console.log('出力しました: ' + mydata);
@@ -15,8 +14,14 @@
       function save() {
         let mydata = document.getElementById('mydata_in').value;
         console.log('保存しました: ' + mydata);
-        // setItemの中身がキーとバリューになる
+        // キーは文字列で定義されている方
         localStorage.setItem('mydata', mydata);
+      }
+
+      // ローカルストレージの値を削除
+      function deleteData() {
+        localStorage.removeItem('mydata');
+        console.log('ローカルストレージの値を削除しました');
       }
     </script>
   </head>
@@ -26,6 +31,7 @@
     <br />
     <button onclick="load();">読み込み</button>
     <button onclick="save();">保存</button>
+    <button onclick="deleteData()">ローカルストレージの値を削除</button>
     <br /><br />
     <div id="mydata_out"></div>
   </body>
