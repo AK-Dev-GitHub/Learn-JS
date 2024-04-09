@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+  <body>
+    <h2>数字の加算</h2>
+    <p>※数値を入力してください。</p>
+    <div style="display: flex; align-items: center">
+      <h3 style="margin-right: 10px">フォーム1</h3>
+      <input id="num1" type="text" style="margin-right: 10px" />
+      <h3 style="margin-right: 10px">フォーム2</h3>
+      <input id="num2" type="text" style="margin-right: 10px" />
+      <button onclick="addNumbers()">加算</button>
+    </div>
+
+    <script>
+      function addNumbers() {
+        try {
+          // 入力されたString型の値をNumber型に変換
+          let num1 = Number(document.getElementById('num1').value);
+          let num2 = Number(document.getElementById('num2').value);
+
+          if (
+            typeof num1 !== 'number' ||
+            typeof num2 !== 'number' ||
+            // isNaN() は、引数が数値でない場合に true を返し、数値の場合は false を返す。
+            // 入力値が空の場合isNaN()関数を使用して、入力が数値であることを確認する必要があるのでロジック追加
+            // フィールドが空の場合、値はNaNになる。
+            isNaN(num1) ||
+            isNaN(num2)
+          ) {
+            throw new Error('数値を入力してください。');
+          } else {
+            let result = num1 + num2;
+            alert('結果: ' + result);
+          }
+        } catch (error) {
+          alert(error.message);
+        }
+      }
+    </script>
+  </body>
+</html>
