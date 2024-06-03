@@ -3,4 +3,4 @@ function colorfulLog(message, color) {
 }
 
 // 使用例: 赤色でエラーメッセージを表示
-colorfulLog('This is an error message', 'red');
+colorfulLog('ログ装飾', 'red');
